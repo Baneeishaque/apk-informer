@@ -1,0 +1,29 @@
+"bundleDependencies": false,
+"directories": {
+    "example": "example"
+  },
+"files": [
+    "dist"
+  ],
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "typings": "dist/types/index.d.ts",
+  "module": "dist/direct-object.es5.js",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
